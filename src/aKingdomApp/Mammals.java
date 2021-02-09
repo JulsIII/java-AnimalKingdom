@@ -8,9 +8,10 @@ public class Mammals extends AbstAnimals
 	private String breath;
     private String reproduce;
 
-    public Mammals(String name, int dyear)
+    public Mammals(int id, String name, int dyear)
     {
-        super(dyear);
+        this.id = id;
+        this.dyear = dyear;
         this.name = name;
     }
 
@@ -42,6 +43,13 @@ public class Mammals extends AbstAnimals
     public void setReproduce(String reproduce)
     {
     	this.reproduce = reproduce;
+    }
+
+   
+    @Override
+    public String toString()
+    {
+        return "Id=" + id + ", name=" + name + " yearNamed=" + dyear;
     }
 
 }

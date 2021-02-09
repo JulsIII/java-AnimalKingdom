@@ -8,9 +8,10 @@ public class Birds extends AbstAnimals
     private String reproduce;
 
 
-    public Birds(String name, int dyear)
+    public Birds(int id, String name, int dyear)
     {
-        super(dyear);
+        this.id = id;
+        this.dyear = dyear;
         this.name = name;
     }
 
@@ -43,6 +44,12 @@ public class Birds extends AbstAnimals
     public void setReproduce(String reproduce)
     {
     	this.reproduce = reproduce;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Id=" + id + ", name=" + name + " yearNamed=" + dyear;
     }
 
 }

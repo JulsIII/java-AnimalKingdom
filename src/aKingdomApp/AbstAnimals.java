@@ -3,15 +3,15 @@ package aKingdomApp;
 public class AbstAnimals 
 {   
     protected int food;
-    private static int maxId = 0;
-	public int id;
-	public String name;
-    private int dyear;
+    // public static int maxId = 0;
+	protected int id;
+	protected String name;
+    protected int dyear;
 
     public AbstAnimals(String name)
 	{
-		maxId++;
-		id = maxId;
+		// maxId++;
+		// id = maxId;
 		this.name = name;
 	}
 
