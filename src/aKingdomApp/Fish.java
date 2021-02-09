@@ -1,12 +1,18 @@
 package aKingdomApp;
 
-public class Fish implements Animal 
+public class Fish extends AbstAnimals
 {
     //move - swim, breath - gills, reproduce - eggs
     private String move;
 	private String breath;
     private String reproduce;
 
+
+    public Fish(String name, int dyear)
+    {
+        super(dyear);
+        this.name = name;
+    }
 
     public String getMove()
     {

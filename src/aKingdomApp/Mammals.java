@@ -1,6 +1,6 @@
 package aKingdomApp;
 
-public class Mammals implements Animal 
+public class Mammals extends AbstAnimals
 {
     //move - walk, breath - lungs, reproduce - live births
 
@@ -8,6 +8,11 @@ public class Mammals implements Animal
 	private String breath;
     private String reproduce;
 
+    public Mammals(String name, int dyear)
+    {
+        super(dyear);
+        this.name = name;
+    }
 
     public String getMove()
     {
