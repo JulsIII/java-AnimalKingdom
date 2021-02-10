@@ -2,23 +2,25 @@ package aKingdomApp;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections; // required import for sorting the ArrayList
+import java.util.Comparator;  // required import for sorting the ArrayList in descending order
 
 public class Main
     {
-        private static List<AbstAnimals> filterAnimals(List<AbstAnimals> theList, CheckAnimal tester)
-        {
-            List<AbstAnimals> tempList = new ArrayList<>();
+        // private static List<AbstAnimals> filterAnimals(List<AbstAnimals> theList, CheckAnimal tester)
+        // {
+        //     List<AbstAnimals> tempList = new ArrayList<>();
     
-            for (AbstAnimals v : theList)
-            {
-                if (tester.test(v))
-                {
-                    tempList.add(v);
-                }
-            }
+        //     for (AbstAnimals v : theList)
+        //     {
+        //         if (tester.test(v))
+        //         {
+        //             tempList.add(v);
+        //         }
+        //     }
     
-            return tempList;
-        }
+        //     return tempList;
+        // }
 
         public static void main(String[] arg)
         {
@@ -62,19 +64,35 @@ public class Main
             myList.add(catfish);
             myList.add(perch);
     
-            System.out.println(myList.toString());
-            System.out.println();
+            // System.out.println(myList.toString());
+            // System.out.println();
 
+
+            System.out.println("\nSize of the ArrayList is " + myList.size());
+
+            for (int i = 0; i < myList.size(); i++)
+            {
+                System.out.println("Index: " + i + " Value: " + myList.get(i));
+            }
+
+            // Collections.sort(myList);
             myList.sort((v1, v2) -> v2.getYear() - v1.getYear());
-            myList.forEach((v) -> System.out.println(v.getYear()));
+            for (int i = 0; i < myList.size(); i++)
+            {
+                System.out.println("Index: " + i + " Value: " + myList.get(i));
+            }
+    
 
-            System.out.println();
-            System.out.println();
+            // myList.sort((v1, v2) -> v2.getYear() - v1.getYear());
+            // myList.forEach((v) -> System.out.println(v.getYear()));
+
+            // System.out.println();
+            // System.out.println();
             
-            myList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
-            myList.forEach((v) -> System.out.println(v.getName()));
-            System.out.println();
-            System.out.println();
+            // myList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+            // myList.forEach((v) -> System.out.println(v.getName()));
+            // System.out.println();
+            // System.out.println();
         
             // List<AbstAnimals> filteredList = filterAnimals(myList, (v) -> v.getYear() < 0);
             // filteredList.forEach((v) -> System.out.println(v));
