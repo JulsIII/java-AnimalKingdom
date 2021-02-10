@@ -85,6 +85,18 @@ public class Main
             System.out.println("***By Lung Users***");
             printAnimals(animalsArrayList, a -> a.breath().equalsIgnoreCase("lungs"));
 
+            System.out.println();
+            System.out.println("***By Lung Users Discovered in 1758***");
+            printAnimals(animalsArrayList, a -> (a.breath().equalsIgnoreCase("lungs") && a.getYear() == 1758));
+
+            System.out.println();
+            System.out.println("***By Lung Users that Lay Eggs***");
+            printAnimals(animalsArrayList, a -> (a.reproduce().equalsIgnoreCase("eggs") && a.breath().equalsIgnoreCase("lungs")));
+
+            System.out.println();
+            System.out.println("***By Name Aplhabetically & Discovered in 1758***");
+            animalsArrayList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+            printAnimals(animalsArrayList, a -> (a.getYear() == 1758));
 
             // System.out.println("\nSize of the ArrayList is " + animals.size());
 
