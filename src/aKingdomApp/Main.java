@@ -71,6 +71,10 @@ public class Main
             animalsArrayList.sort((a1, a2) -> a2.getYear() - a1.getYear());
             System.out.println(animalsArrayList.toString());;
 
+            System.out.println();
+            System.out.println("***By Name Aplhabetically***");
+            animalsArrayList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+            System.out.println(animalsArrayList.toString());;
 
             // System.out.println("\nSize of the ArrayList is " + animals.size());
 
