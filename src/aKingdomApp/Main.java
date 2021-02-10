@@ -76,6 +76,16 @@ public class Main
             animalsArrayList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
             System.out.println(animalsArrayList.toString());;
 
+            System.out.println();
+            System.out.println("***By Movement***");
+            animalsArrayList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+            System.out.println(animalsArrayList.toString());;
+
+            System.out.println();
+            System.out.println("***By Lung Users***");
+            printAnimals(animalsArrayList, a -> a.breath().equalsIgnoreCase("lungs"));
+
+
             // System.out.println("\nSize of the ArrayList is " + animals.size());
 
             // for (int i = 0; i < animals.size(); i++)
