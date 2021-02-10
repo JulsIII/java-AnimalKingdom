@@ -5,9 +5,24 @@ import java.util.ArrayList;
 
 public class Main
     {
+        private static List<AbstAnimals> filterAnimals(List<AbstAnimals> theList, CheckAnimal tester)
+        {
+            List<AbstAnimals> tempList = new ArrayList<>();
+    
+            for (AbstAnimals v : theList)
+            {
+                if (tester.test(v))
+                {
+                    tempList.add(v);
+                }
+            }
+    
+            return tempList;
+        }
+
         public static void main(String[] arg)
         {
-            System.out.println("***Behond the Animal Kingdom!***");
+            System.out.println("***Behold the Animal Kingdom!***");
 
             Mammals panda = new Mammals(0, "Panda", 1869);
             Mammals zebra = new Mammals(1, "Zebra", 1778);
@@ -27,6 +42,8 @@ public class Main
             Fish catfish = new Fish(13, "Catfish", 1817);
             Fish perch = new Fish(14, "Perch", 1758);
 
+            System.out.println();   
+            System.out.println();
 
             List<AbstAnimals> myList = new ArrayList<>();
             myList.add(panda);
@@ -47,6 +64,24 @@ public class Main
     
             System.out.println(myList.toString());
             System.out.println();
+
+            myList.sort((v1, v2) -> v2.getYear() - v1.getYear());
+            myList.forEach((v) -> System.out.println(v.getYear()));
+
+            System.out.println();
+            System.out.println();
+            
+            myList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+            myList.forEach((v) -> System.out.println(v.getName()));
+            System.out.println();
+            System.out.println();
+        
+            // List<AbstAnimals> filteredList = filterAnimals(myList, (v) -> v.getYear() < 0);
+            // filteredList.forEach((v) -> System.out.println(v));
+
+        // System.out.println();
+        // filteredList = filterVehicles (myList, (v) -> (v.getFuelLevel() > 0) && (v instanceof HorseFromVehicle));
+        // filteredList.forEach((v) -> System.out.println(v));
 
         }
         

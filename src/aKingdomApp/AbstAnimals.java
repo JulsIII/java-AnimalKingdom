@@ -44,8 +44,8 @@ public class AbstAnimals
         return dyear;
     }
 
-    // abstract String getPath();
-    // abstract String getName();
+    //  abstract String getPath();
+    //  abstract String getYear();
 
     void consume()
     {
