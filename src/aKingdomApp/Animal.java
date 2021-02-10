@@ -1,9 +1,9 @@
 package aKingdomApp;
 
-public interface Animal 
-{
-    // String move();
-    // String breath();
-    // String reproduce();
+// public interface Animal 
+// {
+//     // String move();
+//     // String breath();
+//     // String reproduce();
     
-}
+// }

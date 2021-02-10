@@ -38,7 +38,7 @@ public class Fish extends AbstAnimals
     // 	this.breath = breath;
     // }
 
-    public String getReproduce()
+    public String reproduce()
     {
     	return "eggs";
     }

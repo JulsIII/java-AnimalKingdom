@@ -1,6 +1,6 @@
 package aKingdomApp;
 
-public class AbstAnimals 
+public abstract class AbstAnimals 
 {   
     // protected int food;
     private static int maxId = 0;
