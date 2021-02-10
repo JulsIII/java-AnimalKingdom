@@ -4,52 +4,58 @@ public class Mammals extends AbstAnimals
 {
     //move - walk, breath - lungs, reproduce - live births
 
-	private String move;
-	private String breath;
-    private String reproduce;
+	// private String move;
+	// private String breath;
+    // private String reproduce;
 
-    public Mammals(int id, String name, int dyear)
+    public Mammals(String name, int dyear)
     {
-        this.id = id;
-        this.dyear = dyear;
-        this.name = name;
+        super(name, dyear);
+        // this.id = id;
+        // this.dyear = dyear;
+        // this.name = name;
     }
 
-    public String getMove()
+    @Override
+    public String move()
     {
-    	return move;
+    	return "walk";
     }
 
-    public void setMove(String move)
+    // public void setMove(String move)
+    // {
+    // 	this.move = move;
+    // }
+
+
+    @Override
+    public String breath()
     {
-    	this.move = move;
+    	return "lungs";
     }
 
-    public String getBreath()
+    // public void setBreath(String breath)
+    // {
+    // 	this.breath = breath;
+    // }
+
+  
+    @Override
+    public String reproduce()
     {
-    	return breath;
+    	return "live births";
     }
 
-    public void setBreath(String breath)
-    {
-    	this.breath = breath;
-    }
-
-    public String getReproduce()
-    {
-    	return reproduce;
-    }
-
-    public void setReproduce(String reproduce)
-    {
-    	this.reproduce = reproduce;
-    }
+    // public void setReproduce(String reproduce)
+    // {
+    // 	this.reproduce = reproduce;
+    // }
 
    
-    @Override
-    public String toString()
-    {
-        return "Id=" + id + ", name=" + name + " yearNamed=" + dyear;
-    }
+    // @Override
+    // public String toString()
+    // {
+    //     return "Id=" + id + ", name=" + name + " yearNamed=" + dyear;
+    // }
 
 }
