@@ -2,6 +2,6 @@ package aKingdomApp;
 
 public interface CheckAnimal 
     {
-        boolean test(AbstAnimals v);
+        boolean test(AbstAnimals a);
     }
 
